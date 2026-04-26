@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task List App</title>
+
+  <!-- Bootstrap  -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- CSS -->
+  <style>
+    .completed-task {
+      text-decoration: line-through;
+      color: #6c757d;
+    }
+
+    .list-group-item {
+      border-left: none;
+      border-right: none;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <span class="navbar-brand fw-bold">Task List App</span>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+
+        <!-- Header -->
+        <div class="text-center mb-4">
+          <h1 class="fw-bold">My Tasks</h1>
+          <p class="text-muted">Create, complete, and delete your tasks.</p>
+        </div>
+
+        <!-- Create Task Form -->
+        <div class="card shadow-sm mb-4">
+          <div class="card-body">
+            <h5 class="card-title mb-3">Add a New Task</h5>
+
+            <form id="task-form">
+              <div class="mb-3">
+                <label for="task-title" class="form-label">Task Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="task-title"
+                  placeholder="Example: Finish homework"
+                  required
+                />
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100">
+                Add Task
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Task List -->
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title mb-3">Task List</h5>
+
+            <ul id="task-list" class="list-group">
+            </ul>
+
+            <p id="empty-message" class="text-muted text-center mt-3">
+              No tasks yet. Add your first task!
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
